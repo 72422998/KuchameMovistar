@@ -62,3 +62,14 @@ document.getElementById("Registro").addEventListener('submit', (e)=>{ //llamando
     e.preventDefault() //no se actualice la pag
     Registrar() //ejecute el cod de registrar
 })
+var input=  document.getElementById('txtDNI');
+input.addEventListener('input',function(){
+  if (this.value.length > 8)
+     this.value = this.value.slice(0,8);
+    else{
+        if(this.value.length < 8){
+            
+    
+        }
+    }
+})
