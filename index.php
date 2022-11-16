@@ -1,1 +1,1 @@
-<?php require_once("./FrontEnd/Login.html")?>
+<?php require_once("./FrontEnd/view/Login.html")?>
