@@ -16,13 +16,27 @@
     <input class="controls" type="text" name="nombres" id="txtNombre" placeholder="Ingrese su Nombre" required>
     <input class="controls" type="text" name="apellidos" id="txtApellidos" placeholder="Ingrese su Apellido" required>
     <input class="controls" type="number" name="Documento de identidad" id="txtDNI" placeholder="Ingrese su DNI" required>
+    <span id="alerta" style="font-size: 12px; color:red"></span>
     <input class="controls" type="email" name="correo" id="txtCorreo" placeholder="Ingrese su Correo" required>
     <input class="controls" type="password" name="correo" id="txtPassword" placeholder="Ingrese su Contraseña" required>
-    <p>Estoy de acuerdo con <a href="#">Términos y Condiciones</a></p>
+    <p>Estoy de acuerdo con <button style="text-decoration: solid; color:blue " id="condiciones" type="button">Términos y Condiciones</button></p>
     <input class="botons" type="submit" value="Registrar">
     <p><a href="Login.html">Ya tengo Cuenta</a></p>
   </form>
 
 </body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.8/dist/sweetalert2.all.min.js"></script>
 <script src="../Js/Func_Registro.js"></script>
+<script>
+document.getElementById('condiciones').addEventListener('click',()=> {
+  var datos = "La actividad del usuario en el sitio web como publicaciones o comentarios estarán sujetos a los presentes términos y condiciones. El usuario se compromete a utilizar el contenido, productos y/o servicios de forma lícita, sin faltar a la moral o al orden público. El usuario se compromete a proporcionar información verídica en los formularios del sitio web. El acceso al sitio web no supone una relación directa ni física  entre el usuario y el titular del sitio web. El usuario manifiesta ser mayor de edad y contar con la capacidad jurídica de acatar los presentes términos y condiciones." 
+
+var datos1 ="El titular no responde por la continuidad y disponibilidad del contenido, productos y/o servicios en a largo plazo, se realizará acciones que fomenten el buen funcionamiento de dicho sitio web sin responsabilidad alguna. El titular no se responsabiliza de que el software esté libre de errores que puedan causar un daño al software y/o hardware del equipo del cual el usuario accede al sitio web. De igual forma, no se responsabiliza por los posibles daños psicológicos que puedan ocasionar el acceso y  utilización del sitio web."
+
+Swal.fire(
+  'Términos y Condiciones de Uso',
+  datos + datos1,
+)
+} )
+</script>
 </html>

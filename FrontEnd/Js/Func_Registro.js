@@ -63,13 +63,25 @@ document.getElementById("Registro").addEventListener('submit', (e)=>{ //llamando
     Registrar() //ejecute el cod de registrar
 })
 var input=  document.getElementById('txtDNI');
+var alerta = document.getElementById('alerta')
 input.addEventListener('input',function(){
-  if (this.value.length > 8)
+  if (this.value.length > 8){
      this.value = this.value.slice(0,8);
-    else{
-        if(this.value.length < 8){
-            
-    
-        }
+    }if(this.value.length == 8){
+        alerta.innerHTML = ''
+        input.style.marginBottom = '16px'
+        alerta.style.paddingBottom= '0px'
     }
+})
+input.addEventListener('focusout',(e)=>{
+    var dni = e.target.value.split('')
+    var mensaje = "el dni no es valido >:v"
+  if(dni.length < 8){
+    e.target.value = ''
+    alerta.innerHTML = mensaje
+    input.style.marginBottom = '4px'
+    alerta.style.paddingBottom = '12px'
+  }
+
+
 })

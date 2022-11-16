@@ -40,10 +40,18 @@ function Registrar(){
     Rg_Motivo.value = 'Seleccione un motivo'
     Rg_Fecha.value = ''
     Rg_Queja.value = ''
-    alert("Su queja fue registrada con exito")
+    window.location.href = '../view/MenuUsuario.html'
 }
 
 document.getElementById("regist-queja").addEventListener('submit', (e)=>{
     e.preventDefault()
     Registrar()
+})
+
+document.getElementById('fecha').addEventListener('click',(e)=>{
+    var fecha = new Date()
+    var año = fecha.getFullYear()
+    var mes = fecha.getMonth() +1
+    var dia = fecha.getDate()
+    e.target.max = año + '-' + mes + '-' + dia
 })

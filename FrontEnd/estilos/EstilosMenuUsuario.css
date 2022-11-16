@@ -89,7 +89,7 @@ li a:hover{
     margin: 10px;
 }
 
-button{
+button, .botonA{ 
     padding: 15px 35px;
     background-color: #1f53c5;
     border: 0;
@@ -99,7 +99,7 @@ button{
     color: #fff;    
 }
 
-button:hover{
+button,.botonA :hover{
     background-color: #083699;
 }
 img{
